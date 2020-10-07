@@ -22,6 +22,29 @@
 		</div>
 
 		<!-- TODO: Add the various action button elements -->
+		
+		<div id="mainMenuActionsWrapper">
+			<!-- start transaction-->
+			<button id="startTransactionButton" type="button" class="action">Start Transaction</button>
+			<br />
+			<br />
+			<!-- view products-->
+			<button id="viewProductsButton" type="button" class="action">View Products</button>
+			<br />
+			<br />
+			<div th:class = "not ${isElevatedUser} ? hidden : ''">
+				<!-- create employee-->
+				<button id="createEmployeeButton" type="button" class="action">Create Employee</button>
+				<br />
+				<br />
+				<!-- sales report-->
+				<button id="salesReportButton" type="button" class="action" title="Not Available">Sales Report</button>
+				<br />
+				<br />
+				<!-- cashier report-->
+				<button id="cashierReportButton" type="button" class="action" title= "Not Available">Cashier Report</button>
+			</div>
+		</div>
 	</div>
 
 	<div class="hidden">
