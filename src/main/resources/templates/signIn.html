@@ -23,6 +23,15 @@
 
 		<form action="/" method="POST" onsubmit="return validateForm();" class="inputContent">
 			<!-- TODO: Form input elements -->
+			<input id="employeeId" type="number" name="employeeId" placeholder="Employee ID" class="update" th:value="${employeeId}" />
+
+            		<br /><br />
+
+            		<input id="password" type="password" name="password" placeholder="Password" class="update" />
+
+            		<br /><br />
+
+            		<input type="submit" value="Sign In" class="submit" />
 		</form>
 	</div>
 		
