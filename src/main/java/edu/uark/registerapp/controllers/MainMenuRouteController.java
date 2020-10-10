@@ -38,7 +38,7 @@ public class MainMenuRouteController extends BaseRouteController {
 		// TODO: Examine the ActiveUser classification if you want this information
 		modelAndView.addObject(
 			ViewModelNames.IS_ELEVATED_USER.getValue(),
-			true);
+			this.isElevatedUser(activeUserEntity)); //returns the activeUserEntity classification
 		
 		return modelAndView;
 	}
