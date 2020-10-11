@@ -47,7 +47,7 @@
 			</table>
 		</div>
 
-		<div class="productActionsWrapper">
+		<div class="productActionsWrapper" the:class="(not ${#strings.isEmpty(errorMessage)} OR not ${isElevatedUser}) ? hidden : ''">
 			<br />
 			<div id="deleteActionContainer" th:class="${product.isEmpty} ? hidden : ''">
 				<button id="deleteButton" type="button" class="action">Delete</button>
