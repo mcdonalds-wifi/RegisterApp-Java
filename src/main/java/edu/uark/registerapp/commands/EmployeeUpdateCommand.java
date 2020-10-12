@@ -22,6 +22,21 @@ public class EmployeeUpdateCommand implements ResultCommandInterface<Employee> {
     //properties
     private UUID employeeId;
     private Employee apiEmployee;
+	public UUID getEmployeeId() {
+		return this.employeeId;
+    }
+    public Employee getApiEmployee() {
+		return this.apiEmployee;
+    }
+
+	public EmployeeUpdateCommand setEmployeeId(final UUID employeeId) {
+		this.employeeId = employeeId;
+		return this;
+	}
+	public EmployeeUpdateCommand setApiEmployee(final Employee apiEmployee) {
+		this.apiEmployee = apiEmployee;
+		return this;
+	}	
 
     @Override
 	public Employee execute() {
@@ -60,22 +75,6 @@ public class EmployeeUpdateCommand implements ResultCommandInterface<Employee> {
 		this.employeeRepository.save(queriedEmployeeEntity.get()); // Write, via an UPDATE, any changes to the database.
 	}
 
-	
-	public UUID getEmployeeId() {
-		return this.employeeId;
-    }
-    public Employee getApiEmployee() {
-		return this.apiEmployee;
-    }
-
-	public EmployeeUpdateCommand setEmployeeId(final UUID employeeId) {
-		this.employeeId = employeeId;
-		return this;
-	}
-	public EmployeeUpdateCommand setApiEmployee(final Employee apiEmployee) {
-		this.apiEmployee = apiEmployee;
-		return this;
-	}
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
