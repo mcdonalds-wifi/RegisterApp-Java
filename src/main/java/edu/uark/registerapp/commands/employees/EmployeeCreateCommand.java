@@ -22,7 +22,7 @@ public class EmployeeCreateCommand implements ResultCommandInterface<Employee> {
 		return this.apiEmployee;
     }
     
-    public boolean getInitialEmployee() {
+    public boolean getIsInitialEmployee() {
 		return this.isInitialEmployee;
     }
     
@@ -32,7 +32,7 @@ public class EmployeeCreateCommand implements ResultCommandInterface<Employee> {
 		return this;
 	}
 
-	public EmployeeCreateCommand setInitialEmployee(
+	public EmployeeCreateCommand setIsInitialEmployee(
 		final boolean isInitialEmployee
 	) {
 		this.isInitialEmployee = isInitialEmployee;
