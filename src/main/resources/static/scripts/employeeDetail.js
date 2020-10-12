@@ -36,21 +36,21 @@ function saveActionClick(event) {
 }
 function validate() {//validate name, password, employee type. Focus on problem
 	var validElem=document.getElementById('employeeFName');
-	if((validElem.value==null)||(validElem.trim()=="")) {//first name should not be blank
+	if((validElem.value==null)||(validElem.value.trim()=="")) {//first name should not be blank
 		displayError("Please enter valid first name");
 		validElem.focus();
 		validElem.select();
 		return false;
 	}
 	validElem=document.getElementById('employeeLName');
-	if((validElem.value==null)||(validElem.trim()=="")) {//last name should not be blank
+	if((validElem.value==null)||(validElem.value.trim()=="")) {//last name should not be blank
 		displayError("Please enter valid last name");
 		validElem.focus();
 		validElem.select();
 		return false;
 	}
 	validElem=document.getElementById('employeePW');
-	if((validElem.value==null)||(validElem.trim()=="")) {//password should not be blank
+	if((validElem.value==null)||(validElem.value.trim()=="")) {//password should not be blank
 		displayError("Please enter valid password");
 		validElem.focus();
 		validElem.select();
