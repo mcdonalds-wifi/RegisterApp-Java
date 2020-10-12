@@ -43,7 +43,4 @@ public class EmployeeQuery implements ResultCommandInterface<Employee> {
     @Autowired
     private EmployeeRepository employeeRepository;
     
-    //set
-
-
 }
