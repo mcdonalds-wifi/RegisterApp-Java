@@ -38,8 +38,8 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 			{ 
 				//get current user method in BaseRouteController.java
 				final Optional<ActiveUserEntity> activeUserEntity = this.getCurrentUser(request);
-				bool present = activeUserEntity.isPresent();
-				bool elevate_status = this.isElevatedUser(activeUserEntity.get());
+				boolean present = activeUserEntity.isPresent();
+				boolean elevate_status = this.isElevatedUser(activeUserEntity.get());
 				if (!present) 
 				{
 						return this.buildInvalidSessionResponse();
