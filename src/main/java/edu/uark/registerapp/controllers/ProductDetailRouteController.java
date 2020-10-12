@@ -24,7 +24,7 @@ import edu.uark.registerapp.models.enums.EmployeeClassification;
 
 @Controller
 @RequestMapping(value = "/productDetail")
-public class ProductDetailRouteController {
+public class ProductDetailRouteController extends BaseRouteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start(@RequestParam final Map<String, String> query_params, final HttpServletRequest req)
 	{
