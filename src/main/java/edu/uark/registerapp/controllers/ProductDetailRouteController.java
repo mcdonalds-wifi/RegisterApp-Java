@@ -32,8 +32,8 @@ public class ProductDetailRouteController {
 		final Optional<ActiveUserEntity> activeUserEntity = this.getCurrentUser(req);
 		
 		//detect presence and elevated status
-		boolean act_user_present = activeUserEntity.isPresent();
-		boolean act_user_elevated = this.isElevatedUser(activeUserEntity.get());		
+		final boolean act_user_present = activeUserEntity.isPresent();
+		final boolean act_user_elevated = this.isElevatedUser(activeUserEntity.get());		
 
 		if(!act_user_present) { return this.buildInvalidSessionResponse();}
 		else if(!act_user_elevated) {return this.buildNoPermissionsResponse(ViewNames.PRODUCT_LISTING.getRoute());}
@@ -55,7 +55,7 @@ public class ProductDetailRouteController {
 		final Optional<ActiveUserEntity> activeUserEntity = this.getCurrentUser(req);
 
 		//check if current user is present
-		boolean present = activeUserEntity.isPresent();
+		final boolean present = activeUserEntity.isPresent();
 		int x = 0;
 		if (!present){x = 1;}
 		if (x == 1) {return this.buildInvalidSessionResponse();}
