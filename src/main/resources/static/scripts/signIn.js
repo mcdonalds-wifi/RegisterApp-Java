@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	//draw attention to the first input on page load
-	const idElement=document.getElementById("employeeId");
+	//const idElement=document.getElementById("employeeId");
 	//idElement.focus();
 	//idElement.select();
 });
