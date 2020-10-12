@@ -20,7 +20,7 @@ function saveActionClick(event) {
 	var saveUrl="/api/employee/";
 	if(document.getElementById('employeeId').value==null)
 		saveurl="/api/employee/"+document.getElementById('employeeId');
-	if(document.getElementById('employeeId').trim()=="") {//ajax post vs patch
+	if(document.getElementById('employeeId').value.trim()=="") {//ajax post vs patch
 		ajaxPost(saveUrl,saveRequest,(callbackResponse) => {
 			event.target.disabled=false;
 			if(isSuccessResponse(callbackResponse))
