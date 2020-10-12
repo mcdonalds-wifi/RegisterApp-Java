@@ -38,7 +38,10 @@ public class EmployeeCreateCommand implements ResultCommandInterface<Employee> {
 		this.isInitialEmployee = isInitialEmployee;
 		return this;
     }
-    
+    	public EmployeeUpdateCommand setApiEmployee(final Employee apiEmployee) {
+		this.apiEmployee = apiEmployee;
+		return this;
+	}
     private void validateProperties() {
         //not blank
 		if (StringUtils.isBlank(this.apiEmployee.getFirstName())) {
