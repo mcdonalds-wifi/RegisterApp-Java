@@ -113,8 +113,8 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 						.setEmployeeId(employeeId)
 						.execute()
 						.setIsInitialEmployee(isInitialEmployee));
-		} catch (final Exception e) 
-		{
+			} catch (final Exception e) 
+			{
 				modelAndView.addObject(ViewModelNames.ERROR_MESSAGE.getValue(),e.getMessage());
 				modelAndView.addObject(ViewModelNames.EMPLOYEE.getValue(),(new Employee()).setIsInitialEmployee(isInitialEmployee));
 			}
