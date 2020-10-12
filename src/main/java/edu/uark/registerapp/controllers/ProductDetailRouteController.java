@@ -60,7 +60,7 @@ public class ProductDetailRouteController extends BaseRouteController {
 		if (!present){x = 1;}
 		if (x == 1) {return this.buildInvalidSessionResponse();}
 
-		final ModelAndView modelAndView = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
+		modelAndView = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
 
 		modelAndView.addObject(ViewModelNames.IS_ELEVATED_USER.getValue(), EmployeeClassification.isElevatedUser(activeUserEntity.get().getClassification()));
 
