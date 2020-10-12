@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.transaction.Transactional;
 import java.util.Optional;
 
+@service
 public class ActiveUserDeleteCommand implements VoidCommandInterface
 {
     private String sessionKey;
