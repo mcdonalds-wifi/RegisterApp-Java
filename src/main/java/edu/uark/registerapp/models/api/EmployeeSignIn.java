@@ -1,5 +1,7 @@
 package edu.uark.registerapp.models.api;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class EmployeeSignIn extends ApiResponse{
     private String employeeID;
     private String password;
