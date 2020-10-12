@@ -38,7 +38,7 @@ public class EmployeeCreateCommand implements ResultCommandInterface<Employee> {
 		this.isInitialEmployee = isInitialEmployee;
 		return this;
     }
-    	public EmployeeUpdateCommand setApiEmployee(final Employee apiEmployee) {
+    	public EmployeeCreateCommand setApiEmployee(final Employee apiEmployee) {
 		this.apiEmployee = apiEmployee;
 		return this;
 	}
