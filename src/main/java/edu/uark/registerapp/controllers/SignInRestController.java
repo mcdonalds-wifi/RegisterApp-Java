@@ -21,7 +21,7 @@ public class SignInRestController extends BaseRestController {
 	) {
 
 		// TODO: Sign out the user associated with request.getSession().getId()
-		this.activeUserDeleteCommand.setSessionKey(request.getSession().getId()).execute();
+		this.activeUserDeleteCommand.setSessionKey(request.getSession().getId());
 
 		return (new ApiResponse())
 			.setRedirectUrl(ViewNames.SIGN_IN.getRoute());
