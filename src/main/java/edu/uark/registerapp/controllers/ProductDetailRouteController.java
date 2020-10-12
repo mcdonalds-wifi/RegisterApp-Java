@@ -52,7 +52,7 @@ public class ProductDetailRouteController {
 		//check if current user is present
 		bool present = activeUserEntity.isPresent();
 		int x = 0;
-		if (!present){x = 1}
+		if (!present){x = 1;}
 		if (x = 1) {return this.buildInvalidSessionResponse();}
 
 		final ModelAndView modelAndView = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
