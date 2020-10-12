@@ -1,5 +1,6 @@
 package edu.uark.registerapp.commands.activeUsers;
 
+import org.springframework.stereotype.Service;
 import edu.uark.registerapp.commands.VoidCommandInterface;
 import edu.uark.registerapp.models.repositories.ActiveUserRepository;
 import edu.uark.registerapp.models.entities.ActiveUserEntity;
