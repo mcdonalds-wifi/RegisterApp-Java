@@ -12,6 +12,7 @@ import edu.uark.registerapp.models.api.Employee;
 import edu.uark.registerapp.models.entities.EmployeeEntity;
 import edu.uark.registerapp.models.repositories.EmployeeRepository;
 
+@Service
 public class EmployeeQuery implements ResultCommandInterface<Employee> {
     //properties
     private UUID employeeId;
