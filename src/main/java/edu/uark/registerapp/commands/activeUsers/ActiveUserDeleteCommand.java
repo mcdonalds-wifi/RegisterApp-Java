@@ -16,10 +16,10 @@ public class ActiveUserDeleteCommand implements VoidCommandInterface
     @Autowired
     private ActiveUserRepository activeUserRepository;
 
-    public void setSessionKey(String s)
-    {
-        sessionKey = s;
-    }
+    public ActiveUserDeleteCommand setSessionKey(final String sessionKey) {
+		this.sessionKey = sessionKey;
+		return this;
+	}
 
     public String getSessionKey()
     {
