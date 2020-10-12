@@ -48,7 +48,7 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 				else if (!elevate_status) {return this.buildNoPermissionsResponse();}
 			}
 
-		return this.buildStartResponse(!activeUserExists, queryParameters);
+		return this.buildStartResponse(!active_user_status, queryParameters);
 	//	return new ModelAndView(ViewModelNames.EMPLOYEE_TYPES.getValue());
 	}
 
