@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Save
 function saveActionClick(event) {
-	if(!validateSave())//stop save functionality
+	if(!validate())//stop save functionality
 		return;
 	event.target.disabled=true;
 	const saveRequest={
@@ -34,7 +34,7 @@ function saveActionClick(event) {
 		});
 	}
 }
-function validateSave() {//validate name, password, employee type. Focus on problem
+function validate() {//validate name, password, employee type. Focus on problem
 	var validElem=document.getElementById('employeeFName');
 	if((validElem.value==null)||(validElem.trim()=="")) {//first name should not be blank
 		displayError("Please enter valid first name");
