@@ -13,7 +13,7 @@ import edu.uark.registerapp.models.api.Product;
 
 @Controller
 @RequestMapping(value = "/")
-public class ProductListingRouteController {
+public class ProductListingRouteController extends BaseRouteController{
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView showProductListing() {
 		ModelAndView modelAndView =
