@@ -3,6 +3,8 @@ package edu.uark.registerapp.controllers.enums;
 public enum ViewModelNames {
 	NOT_DEFINED(""),
 	ERROR_MESSAGE("errorMessage"),
+	IS_ELEVATED_USER("isElevatedUser"),
+	EMPLOYEE_ID("employeeID"),
 	PRODUCTS("products"), // Product listing
 	PRODUCT("product"); // Product detail
 	

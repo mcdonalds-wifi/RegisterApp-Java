@@ -1,0 +1,41 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<title>Register - Sign In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+	<link rel="stylesheet" type="text/css" href="/styles/master.css">
+
+	<script type="text/javascript" src="/scripts/master.js" defer></script>
+	<script type="text/javascript" src="/scripts/signIn.js" defer></script>
+</head>
+
+<body>
+
+	<div class="header">
+		<h1 class="primary-message">Sign In</h1>
+	</div>
+		
+	<div id="main" class="main">
+		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
+			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
+		</div>
+
+		<form action="/" method="POST" onsubmit="return validateForm();" class="inputContent">
+			<!-- TODO: Form input elements -->
+			<input type="number" id="employeeID" class="update" name="employeeID" placeholder="Employee ID" />
+
+           		<br /><br />
+
+            		<input type="password" id="password" class="update" name="password" placeholder="Password" />
+
+            		<br /><br />
+
+            		<input type="submit" value="Sign In" class="submit" />
+
+		</form>
+	</div>
+		
+</body>
+
+</html>
