@@ -26,7 +26,7 @@ public class EmployeeQuery implements ResultCommandInterface<Employee> {
 
     //functionality
     @Override
-	public FindEmployee execute() {
+	public Employee execute() {
         //using .findById()
 		final Optional<EmployeeEntity> employeeEntity =
 			this.employeeRepository.findById(this.employeeId);
