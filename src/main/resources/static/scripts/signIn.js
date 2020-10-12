@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 	//draw attention to the first input on page load
 	const idElement=document.getElementById("employeeId");
-	idElement.focus();
-	idElement.select();
+	//idElement.focus();
+	//idElement.select();
 });
 function validateForm() { //validate inputs. calls displayError from master.js
 	const idElement=document.getElementById('employeeID');
