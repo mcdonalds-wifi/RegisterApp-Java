@@ -23,6 +23,14 @@ import edu.uark.registerapp.models.api.EmployeeSignIn;
 @Controller
 @RequestMapping(value = "/")
 public class SignInRouteController extends BaseRouteController {
+	
+	//properties of class
+	@Autowired
+	private EmployeeSignInCommand employeeSignInCommand;
+
+	@Autowired
+	private ActiveEmployeeExistsQuery activeEmployeeExistsQuery;
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView signIn(
 		@RequestParam final Map<String, String> queryParameters
@@ -85,11 +93,6 @@ public class SignInRouteController extends BaseRouteController {
 				ViewNames.MAIN_MENU.getRoute()));
 	}
 
-	//properties of class
-	@Autowired
-	private EmployeeSignInCommand employeeSignInCommand;
-
-	@Autowired
-	private ActiveEmployeeExistsQuery activeEmployeeExistsQuery;
+	
 	
 }
