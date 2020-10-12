@@ -39,7 +39,7 @@ public class ProductDetailRouteController extends BaseRouteController {
 		else if(!act_user_elevated) {return this.buildNoPermissionsResponse(ViewNames.PRODUCT_LISTING.getRoute());}
 		
 		final ModelAndView mod_view = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
-		mod_view.addObject(ViewModelNames.IS_ELEVATED_USER.GETValue(), true);
+		mod_view.addObject(ViewModelNames.IS_ELEVATED_USER.getValue(), true);
 		mod_view.addObject(ViewModelNames.PRODUCT.getValue(),(new Product()).setLookupCode(StringUtils.EMPTY).setCount(0));
 	
 		return mod_view;
