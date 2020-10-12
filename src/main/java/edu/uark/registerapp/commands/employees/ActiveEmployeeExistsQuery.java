@@ -5,6 +5,7 @@ import edu.uark.registerapp.commands.exceptions.NotFoundException;
 import edu.uark.registerapp.models.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+@Service
 public class ActiveEmployeeExistsQuery implements VoidCommandInterface
 {
     @Autowired
