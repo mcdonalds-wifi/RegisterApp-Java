@@ -49,7 +49,7 @@ public class ProductDetailRouteController {
 	}
 
 	@RequestMapping(value = "/{productId}", method = RequestMethod.GET)
-	public ModelAndView startWithProduct(@PathVariable final UUID productId, @RequestParam final Map<string, String> query_params, final HttpServletRequest req) {
+	public ModelAndView startWithProduct(@PathVariable final UUID productId, @RequestParam final Map<String, String> query_params, final HttpServletRequest req) {
 
 		final ModelAndView modelAndView = new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName());
 		final Optional<ActiveUserEntity> activeUserEntity = this.getCurrentUser(req);
