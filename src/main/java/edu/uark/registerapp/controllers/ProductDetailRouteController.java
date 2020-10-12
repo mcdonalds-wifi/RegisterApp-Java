@@ -51,7 +51,7 @@ public class ProductDetailRouteController extends BaseRouteController {
 	@RequestMapping(value = "/{productId}", method = RequestMethod.GET)
 	public ModelAndView startWithProduct(@PathVariable final UUID productId, @RequestParam final Map<String, String> query_params, final HttpServletRequest req) {
 
-		final ModelAndView modelAndView = new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName());
+		//final ModelAndView modelAndView = new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName());
 		final Optional<ActiveUserEntity> activeUserEntity = this.getCurrentUser(req);
 
 		//check if current user is present
@@ -60,7 +60,7 @@ public class ProductDetailRouteController extends BaseRouteController {
 		if (!present){x = 1;}
 		if (x == 1) {return this.buildInvalidSessionResponse();}
 
-		modelAndView = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
+		final ModelAndView modelAndView = this.setErrorMessageFromQueryString(new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()), query_params);
 
 		modelAndView.addObject(ViewModelNames.IS_ELEVATED_USER.getValue(), EmployeeClassification.isElevatedUser(activeUserEntity.get().getClassification()));
 
