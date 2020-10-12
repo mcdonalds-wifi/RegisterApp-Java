@@ -83,7 +83,7 @@ function completeSaveAction(callbackResponse) {
 	displayEmployeeSavedAlertModal();
 	//set employeeEmployeeId visible if it's hidden
 	const employeeEmpIdRow=document.getElementById('employeeEmployeeId').closest("tr");
-	if(employeeEmpIdRow.classList.contains('hidden') {
+	if(employeeEmpIdRow.classList.contains('hidden')) {
 		document.getElementById('employeeId').value=callbackResponse.data.id;
 		document.getElementById('employeeEmployeeId').value=callbackResponse.data.employeeid;
 		employeeEmpIdRow.classList.remove('hidden');
